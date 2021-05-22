@@ -1,11 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.schoolBackgroundImage{
-
+.schoolBackgroundImage {
     /* Background settings */
     height: 100vh;
     background: url("./resources/background.jpg") white center no-repeat;
@@ -16,25 +15,97 @@
     align-items: center;
 }
 
-.schoolBackgroundImage .textBackground{
-    background-color: midnightblue;
-    width: 100%;
-    height: 200px;
 
+/* Navbar */
+
+
+/* .logo {
+    width: 10%;
+    height: 10%;
+} */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar-text {
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.5s;
+    font-family: Calibri, sans-serif;
+}
+
+nav {
+    font-size: 20px;
+    color: #cecece;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.50)
+}
+
+nav>ul {
+    display: flex;
+    list-style: none;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav>ul>li {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 5px;
+    transition: 0.5s;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+}
+
+nav>ul>li:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    color: #111111;
+    transform: rotate(-6deg) skewY(3deg) scaleX(.866025);
+}
+
+nav>ul>li:hover>a {
+    color: black;
+}
+
+nav>ul>li:active>a {
+    transform: scale(1.2);
+}
+
+
+/* end-navbar */
+
+.schoolBackgroundImage .textBackground {
+    background-color: #2d2d2d;
+    width: 100%;
+    height: 100px;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 7px 6px 2px rgba(0, 0, 0, 0.75);
     display: flex;
     align-items: center;
 }
 
-/* Título dentro del div */
-.schoolBackgroundImage .textBackground .title-schoolName{
-    font-family: Calibri, sans-serif;
-    color: grey;
-    text-align: center;
-    font-size: 75px;
-    vertical-align: auto;
 
+/* Título dentro del div */
+
+.schoolBackgroundImage .textBackground .title-schoolName {
+    font-family: Calibri, sans-serif;
+    color: #cecece;
+    text-align: center;
+    font-size: 40px;
+    vertical-align: auto;
     width: 100%;
 }
+
 
 /* Comienza loggin */
 
@@ -56,6 +127,15 @@
     flex-direction: column;
 }
 
+.modal-loggin .exitButtton{
+    text-decoration: none;
+    color: black;
+
+    position: relative;
+    top: -7%;
+    left: 107%;
+}
+
 .modal-loggin h2{
     margin-bottom: 40px;
 
@@ -63,7 +143,7 @@
     font-size: 35px;
 }
 
-.modal-loggin form{
+.modal-loggin form {
     display: flex;
     flex-direction: column;
 }
