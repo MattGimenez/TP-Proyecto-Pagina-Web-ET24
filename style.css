@@ -102,16 +102,15 @@ nav>ul>li:active>a {
     color: #cecece;
     text-align: center;
     font-size: 40px;
-    vertical-align: auto;
     width: 100%;
 }
 
 
 /* Comienza loggin */
-
+  
 .modal-loggin{
     background-color: whitesmoke;
-    border: 2px solid black;
+    border: 0.5px solid black;
     border-radius: 7px;
 
     width: 40%;
@@ -123,11 +122,11 @@ nav>ul>li:active>a {
     transform: translate(-50%,-50%);
     margin: auto;
 
-    display: flex;
-    flex-direction: column;
+    display: none;
 }
 
 .modal-loggin .exitButtton{
+    width: 15px;
     text-decoration: none;
     color: black;
 
@@ -179,6 +178,7 @@ nav>ul>li:active>a {
     width: 100%;
     border: none;
     transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 .modal-loggin .button:hover{
