@@ -103,3 +103,21 @@ nav>ul>li:active>a {
     vertical-align: auto;
     width: 100%;
 }
+
+
+/* Comienza loggin */
+
+.modal-loggin {
+    border: 1px solid black;
+    background-color: red;
+    width: 45%;
+    position: fixed;
+    top: 50%;
+    right: 30%;
+}
+
+.modal-loggin form {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
