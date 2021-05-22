@@ -9,6 +9,7 @@
     /* Background settings */
     height: 100vh;
     background: url("./resources/background.jpg") white center no-repeat;
+    background-size: cover;
 
     /* Title settings */
     display: flex;
@@ -38,19 +39,68 @@
 /* Comienza loggin */
 
 .modal-loggin{
-    border: 1px solid black;
-    background-color: red;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 7px;
 
-    width: 45%;
+    width: 40%;
+    padding: 50px 70px;
 
     position: fixed;
     top: 50%;
-    right: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-loggin h2{
+    margin-bottom: 40px;
+
+    text-align: center;
+    font-size: 35px;
 }
 
 .modal-loggin form{
     display: flex;
     flex-direction: column;
+}
 
-    width: 33%;
+.modal-loggin form input{
+    font-size: 16px;
+    height: 56px;
+    border: none;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    background: transparent;
+    box-sizing: border-box;
+    
+    transition: all 0.1s ease-in;
+}
+
+.modal-loggin form input:focus{
+    border-bottom: solid 2px #4d15b4;
+    outline: 0;
+}
+
+.modal-loggin .forgotPass{
+    margin-top: 10px;
+    text-align: right;
+    text-decoration: none;
+    font-size: small;
+    color: black;
+}
+
+.modal-loggin .button{
+    height: 48px;
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.modal-loggin .button:hover{
+    background-color: rgb(115, 142, 210);
 }
