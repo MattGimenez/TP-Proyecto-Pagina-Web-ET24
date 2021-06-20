@@ -51,13 +51,14 @@
     transition: 0.3s;
     border-bottom: 5px solid #dddddd;
     color: white;
+    user-select: none;
 }
 
 nav {
     font-size: 20px;
     color: #cecece;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.60);
+    background-color: rgba(0, 0, 0, 0.80);
 }
 
 nav>ul {
@@ -154,6 +155,7 @@ nav>ul>li:active>.navbar-login {
     margin: 10px 5px;
     transition: 0.3s;
     border-radius: 5px;
+    user-select: none;
 }
 
 .modal-loggin .exitButtton:hover {
@@ -195,7 +197,8 @@ nav>ul>li:active>.navbar-login {
     margin-left: auto;
     text-decoration: none;
     font-size: small;
-    color: black;
+    color: #10418e;
+    user-select: none;
 }
 
 .modal-loggin .button {
@@ -208,6 +211,7 @@ nav>ul>li:active>.navbar-login {
     cursor: pointer;
     border-radius: 5px;
     background-color: #dddddd;
+    user-select: none;
 }
 
 .modal-loggin .button:hover {
@@ -215,3 +219,57 @@ nav>ul>li:active>.navbar-login {
     background-color: #10418e;
     color: white;
 }
+
+
+/* Parpadeo de menssageLogin */
+
+.messageLogin {
+    color: red;
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    -webkit-animation-name: parpadeo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 2;
+}
+
+@-moz-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+
+/* fin parpadeo de messageLogin */

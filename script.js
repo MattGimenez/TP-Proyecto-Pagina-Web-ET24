@@ -1,5 +1,4 @@
-var users = [
-    {
+var users = [{
         "username": "adm24",
         "password": "temporalpassword",
         "type": "adm"
@@ -27,6 +26,7 @@ function showModal() {
 
 // Hide login modal
 document.querySelector('.exitButtton').addEventListener("click", hiddeModal, "false");
+
 function hiddeModal() {
     document.querySelector('.modal-loggin').style.setProperty('display', 'none')
     document.querySelector('.textBackground').style.setProperty('visibility', 'unset')
@@ -40,21 +40,20 @@ document.querySelector("button.button.login").addEventListener("click", (event) 
     const inputUsername = document.querySelector("#username").value;
     const inputPassword = document.querySelector("#password").value;
     const messageBox = document.querySelector("#messageLogin");
-    const searchResults = users.find( usuario => usuario.username == inputUsername);
-    
-    if(searchResults){
-        if(searchResults.password == inputPassword){
-            if(searchResults.type == "adm"){
-            window.location="./panelAdm.html";
-        }else if(searchResults.type == "user"){
-            window.location="./panelUser.html";
-        }
-        }else{
+    const searchResults = users.find(usuario => usuario.username == inputUsername);
+
+    if (searchResults) {
+        if (searchResults.password == inputPassword) {
+            if (searchResults.type == "adm") {
+                window.location = "./panelAdm.html";
+            } else if (searchResults.type == "user") {
+                window.location = "./panelUser.html";
+            }
+        } else {
             messageBox.innerHTML = "Contraseña incorrecta, vuelva a intentarlo";
         }
-    }else{
+    } else {
         messageBox.innerHTML = "Usuario incorrecto, vuelva a intentarlo";
     }
 
-}, "true"
-);
+}, "true");
