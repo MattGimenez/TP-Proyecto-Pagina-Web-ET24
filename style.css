@@ -221,7 +221,7 @@ nav>ul>li:active>.navbar-login {
 }
 
 
-/* Parpadeo de menssageLogin */
+/* Parpadeo de messageLogin */
 
 .messageLogin {
     color: red;
@@ -272,4 +272,22 @@ nav>ul>li:active>.navbar-login {
 }
 
 
-/* fin parpadeo de messageLogin */
+/* PANEL USER STARTS HERE*/
+
+.schoolBackgroundImage .user-textBackground {
+    background-color: #2d2d2d;
+    width: 100%;
+    height: 100px;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 7px 6px 2px rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+}
+
+.schoolBackgroundImage .user-textBackground .title-userName {
+    font-family: Calibri, sans-serif;
+    color: #cecece;
+    text-align: center;
+    font-size: 40px;
+    width: 100%;
+}
