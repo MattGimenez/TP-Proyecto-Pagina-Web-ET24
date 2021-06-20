@@ -9,17 +9,15 @@ var users = [{
         "type": "user"
     }
 ];
-document.querySelector('.exitButtton').addEventListener("click", hiddeModal, "false");
-
-function hiddeModal() {
-    document.querySelector('.modal-loggin').style.setProperty('display', 'none')
-    document.querySelector('.textBackground').style.setProperty('visibility', 'unset')
-}
 
 // Show login modal
 document.querySelector('#login').addEventListener("click", showModal, "false");
 
 function showModal() {
+
+    // Deshabilitacion de botones de nav
+    document.querySelectorAll("nav>ul>li").disabled = true;
+
     document.querySelector('.modal-loggin').style.setProperty('display', 'block')
     document.querySelector('.textBackground').style.setProperty('visibility', 'hidden')
 }
@@ -27,10 +25,17 @@ function showModal() {
 // Hide login modal
 document.querySelector('.exitButtton').addEventListener("click", hiddeModal, "false");
 
-function hiddeModal() {
-    document.querySelector('.modal-loggin').style.setProperty('display', 'none')
-    document.querySelector('.textBackground').style.setProperty('visibility', 'unset')
+function hiddeModal(){
 
+    // Deshabilitacion de botones de nav
+    document.querySelectorAll("nav>ul>li").disabled = false;
+
+    const messageBox = document.querySelector("#messageLogin");
+
+    messageBox.innerHTML = "";
+
+    document.querySelector('.modal-loggin').style.setProperty('display', 'none');
+    document.querySelector('.textBackground').style.setProperty('visibility', 'unset');
 }
 
 // Login
