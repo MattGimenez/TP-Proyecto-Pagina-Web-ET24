@@ -1,4 +1,5 @@
-var users = [{
+var users = [
+    {
         "username": "adm24",
         "password": "temporalpassword",
         "type": "adm"
@@ -53,6 +54,8 @@ document.querySelector("button.button.login").addEventListener("click", (event) 
                 window.location = "./panelAdm.html";
             } else if (searchResults.type == "user") {
                 window.location = "./panelUser.html";
+
+                sessionStorage.setItem("user", searchResults.username);
             }
         } else {
             messageBox.innerHTML = "Contraseña incorrecta, vuelva a intentarlo";
@@ -62,3 +65,17 @@ document.querySelector("button.button.login").addEventListener("click", (event) 
     }
 
 }, "true");
+
+// Logout
+document.querySelector("#logout").addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location = "./inicio.html";
+});
+
+window.onload = function(){
+
+    var title = document.querySelector(".title-userName");
+    var userName = sessionStorage.getItem("username");
+    title.innerHTML += userName;
+
+}
