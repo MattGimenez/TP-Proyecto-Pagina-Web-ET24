@@ -10,9 +10,16 @@ var users = [
         "type": "user"
     }
 ];
+document.querySelector('.exitButtton').addEventListener("click", hiddeModal, "false");
+
+function hiddeModal() {
+    document.querySelector('.modal-loggin').style.setProperty('display', 'none')
+    document.querySelector('.textBackground').style.setProperty('visibility', 'unset')
+}
 
 // Show login modal
 document.querySelector('#login').addEventListener("click", showModal, "false");
+
 function showModal() {
     document.querySelector('.modal-loggin').style.setProperty('display', 'block')
     document.querySelector('.textBackground').style.setProperty('visibility', 'hidden')
