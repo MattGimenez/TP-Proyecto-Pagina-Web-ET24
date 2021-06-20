@@ -65,17 +65,3 @@ document.querySelector("button.button.login").addEventListener("click", (event) 
     }
 
 }, "true");
-
-// Logout
-document.querySelector("#logout").addEventListener("click", (event) => {
-    event.preventDefault();
-    window.location = "./inicio.html";
-});
-
-window.onload = function(){
-
-    var title = document.querySelector(".title-userName");
-    var userName = sessionStorage.getItem("username");
-    title.innerHTML += userName;
-
-}
