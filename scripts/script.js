@@ -36,6 +36,8 @@ window.onload = () => {
         const messageBox = document.querySelector("#messageLogin");
         const searchResults = users.find(usuario => usuario.username == inputUsername);
 
+        console.log(CryptoJS.MD5(inputPassword));
+
         if (searchResults) {
             if (searchResults.password == inputPassword) {
                 sessionStorage.setItem("user", searchResults.username);

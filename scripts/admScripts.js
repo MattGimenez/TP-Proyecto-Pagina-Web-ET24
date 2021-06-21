@@ -1,5 +1,4 @@
 window.onload = function () {
-
     if (!window.sessionStorage) {
         window.location = "./inicio.html";
     }
