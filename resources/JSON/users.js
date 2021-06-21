@@ -7,6 +7,6 @@ var users = [
     {
         "username": "user24",
         "password": "temporalpassword",
-        "type": "adm"
+        "type": "user"
     }
 ];
