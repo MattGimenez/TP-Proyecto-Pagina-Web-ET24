@@ -40,8 +40,8 @@ window.onload = () => {
             if (searchResults.password == inputPassword) {
                 sessionStorage.setItem("user", searchResults.username);
                 if (searchResults.type == "adm") {
-                    window.location = "./panelAdm.html";
                     sessionStorage.setItem("type", "adm");
+                    window.location = "./panelAdm.html";
                 } else if (searchResults.type == "user") {
                     sessionStorage.setItem("type", "user");
                     window.location = "./panelUser.html";
