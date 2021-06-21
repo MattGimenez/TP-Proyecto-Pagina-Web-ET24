@@ -7,7 +7,7 @@
 .schoolBackgroundImage {
     /* Background settings */
     height: 100vh;
-    background: url("./resources/images/background.jpg") white center no-repeat;
+    background: url("../resources/images/background.jpg") white center no-repeat;
     background-size: cover;
     /* Title settings */
     display: flex;
