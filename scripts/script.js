@@ -36,17 +36,15 @@ window.onload = () => {
         const messageBox = document.querySelector("#messageLogin");
         const searchResults = users.find(usuario => usuario.username == inputUsername);
 
-        console.log(CryptoJS.MD5(inputPassword));
-
         if (searchResults) {
-            if (searchResults.password == inputPassword) {
+            if (searchResults.password == CryptoJS.MD5(inputPassword).toString()) {
                 sessionStorage.setItem("user", searchResults.username);
                 if (searchResults.type == "adm") {
                     sessionStorage.setItem("type", "adm");
-                    window.location = "./panelAdm.html";
+                    window.location = "./administración.html";
                 } else if (searchResults.type == "user") {
                     sessionStorage.setItem("type", "user");
-                    window.location = "./panelUser.html";
+                    window.location = "./materias.html";
                 }
             } else {
                 messageBox.innerHTML = "Contraseña incorrecta, vuelva a intentarlo";

@@ -266,9 +266,10 @@ nav>ul>li:active>.navbar-login {
 
 .userBackgroundImage {
     /* Background settings */
-    height: 100vh;
+    min-height: 100vh;
     background: url("../resources/images/background.jpg") white center no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .userBackgroundImage .user-textBackground {
@@ -295,7 +296,7 @@ nav>ul>li:active>.navbar-login {
 
 .userBackgroundImage .materiaBackground {
     background-color: rgb(31, 31, 31);
-    width: 80%;
+    width: 50%;
     margin: auto;
     margin-top: 50px;
     border-radius: 5px;
@@ -309,7 +310,8 @@ nav>ul>li:active>.navbar-login {
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
+    padding: 30px;
 }
 
 .progressBar {
@@ -334,10 +336,28 @@ nav>ul>li:active>.navbar-login {
 
 /* START OF ADM MENU */
 
-.admMenu{
-    width: 90%;
+.admUsers{
+    font-family: Calibri, sans-serif;
+    color: #cecece;
+    font-size: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 30px;
+}
+
+.admMenu {
     height: 73%;
     margin: auto;
     margin-top: 20px;
-    background-color: #2d2d2d;
+    font-family: Calibri, sans-serif;
+    color: #cecece;
+    font-size: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    padding: 30px;
 }
+
