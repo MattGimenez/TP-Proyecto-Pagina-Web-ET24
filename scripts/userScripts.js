@@ -1,3 +1,35 @@
+var subjects = [
+    {
+    "classHours": "4",
+    "name": "Matemática",
+    "prof": "Pierini"
+    },
+    {
+    "classHours": "3",
+    "name": "Inglés",
+    "prof": "Lopresti"
+    },
+    {
+    "classHours": "9",
+    "name": "Prácticas Profesionalizantes",
+    "prof": "Martínez"
+    },
+    {
+    "classHours": "6",
+    "name": "Desarrollo de Sistemas",
+    "prof": "Mombrú"
+    },
+    {
+    "classHours": "7",
+    "name": "Administración de Sistemas y Redes",
+    "prof": "Ganci"
+    },
+    {
+    "classHours": "2",
+    "name": "Ciencia y Tecnología",
+    "prof": "Lima Barreto"
+    }
+];
 window.onload = function () {
 
     if (!window.sessionStorage) {
@@ -15,28 +47,12 @@ window.onload = function () {
         window.location = "./inicio.html";
     });
 
-    if (window.XMLHttpRequest) {
-        xmlhttp = new XMLHttpRequest();
-    }
-    else {
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.open("GET", "../resources/data/materias.xml", false);
-    xmlhttp.onerror = function (e) {
-        console.error(xmlhttp.statusText);
-    };
-    xmlhttp.send();
-    xmlDoc = xmlhttp.responseText;
-    
-    var parser = new DOMParser();
-    var doc = parser.parseFromString(xmlDoc, "application/xml");
-
     var contenedor = document.querySelector(".materiasContainer");
 
-    doc.querySelectorAll("subject").forEach((elmt)=>{
-        var hours = elmt.querySelector("classHours").innerHTML,
-            subjectName = elmt.querySelector("name").innerHTML,
-            teacher = elmt.querySelector("prof").innerHTML;
+    subjects.forEach((subject)=>{
+        var hours = subject.classHours,
+            subjectName = subject.name,
+            teacher = subject.prof;
         
         var nodeBackground = document.createElement("div");
         nodeBackground.setAttribute("class", "materiaBackground");
