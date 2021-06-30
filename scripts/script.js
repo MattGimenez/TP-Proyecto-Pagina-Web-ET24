@@ -38,12 +38,12 @@ window.onload = () => {
 
         if (searchResults) {
             if (searchResults.password == CryptoJS.MD5(inputPassword).toString()) {
-                sessionStorage.setItem("user", searchResults.username);
+                // sessionStorage.setItem("user", searchResults.username);
                 if (searchResults.type == "adm") {
-                    sessionStorage.setItem("type", "adm");
+                    // sessionStorage.setItem("type", "adm");
                     window.location = "./administración.html";
                 } else if (searchResults.type == "user") {
-                    sessionStorage.setItem("type", "user");
+                    // sessionStorage.setItem("type", "user");
                     window.location = "./materias.html";
                 }
             } else {
